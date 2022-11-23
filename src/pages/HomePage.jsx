@@ -2,10 +2,11 @@ import React from "react";
 import previewImg from "../assets/preview.gif";
 
 /* Import Your Files Below This Line*/
+import {StyledSection} from '../components/styled/Section.styled'
 
 function HomePage() {
   return (
-    <section>
+    <StyledSection>
       <div>
         <img src={previewImg} alt="Result Preview" />
         <article>
@@ -18,7 +19,7 @@ function HomePage() {
           </h2>
         </article>
       </div>
-    </section>
+    </StyledSection>
   );
 }
 

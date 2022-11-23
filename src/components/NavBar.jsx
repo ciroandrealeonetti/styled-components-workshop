@@ -3,6 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import ironhackLogo from "../assets/ironhack-logo.png";
 
 /* Import Your Files Below This Line*/
+import styled from "styled-components";
 
 function NavBar() {
   /* Check Current Tab */
@@ -13,7 +14,7 @@ function NavBar() {
   }, [location]);
 
   return (
-    <nav>
+    <StyledNavbar>
       <ul>
         <li>
           <NavLink to={"/"}>
@@ -45,8 +46,41 @@ function NavBar() {
           <h3>Login</h3>
         </button>
       </NavLink>
-    </nav>
+    </StyledNavbar>
   );
 }
+
+const StyledNavbar = styled.nav`
+height: 7vh;
+background-color: #ff5959;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+img{
+  height: 5vh;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+li{
+  margin-right: 2vh;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+.active{
+  color: black;
+}
+`
+
 
 export default NavBar;
